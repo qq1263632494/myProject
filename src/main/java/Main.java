@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-
+//哈哈
 public class Main {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
