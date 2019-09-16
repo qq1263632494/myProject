@@ -17,6 +17,7 @@ public class Main {
         for(User u:l){
             System.out.println(u);
         }
+        System.out.println("are you ok?");
         session.commit();
         session.close();
     }

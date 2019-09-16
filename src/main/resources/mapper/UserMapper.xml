@@ -17,4 +17,7 @@
     <select id="selectAll" resultMap="simpleMap">
         select * from tb_user
     </select>
+    <select id="selectById" resultType="User">
+        select * from tb_user where ID=#{id};
+    </select>
 </mapper>
