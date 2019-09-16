@@ -4,4 +4,10 @@
     <insert id="save" parameterType="User" useGeneratedKeys="true">
         INSERT INTO TB_USER(name, sex, age) VALUES (#{name}, #{sex}, #{age})
     </insert>
+    <update id="update">
+        UPDATE tb_user SET tb_user.name = #{username}, sex=#{sex}, age=#{age} WHERE id = #{id}
+    </update>
+    <delete id="delete">
+        delete from tb_user where ID = #{id}
+    </delete>
 </mapper>
