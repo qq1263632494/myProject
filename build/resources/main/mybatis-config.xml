@@ -13,6 +13,7 @@
                 <property name="driver" value="org.sqlite.JDBC"/>
                 <property name="url" value="jdbc:sqlite:/home/wang/文档/test.db"/>
                 <property name="poolMaximumActiveConnections" value="20"/>
+                <property name="poolMaximumIdleConnections" value="10"/>
             </dataSource>
         </environment>
     </environments>
