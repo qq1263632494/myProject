@@ -15,10 +15,9 @@ public class Main {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession session = sqlSessionFactory.openSession();
-        EmployeeMapper em = session.getMapper(EmployeeMapper.class);
         HashMap<String, Object> params = new HashMap<>();
         params.put("id", 1);
-        List<Employee> list = em.selectEmployeeByIdLike(params);
+        List<Employee> list = session.selectList("mapper.EmployeeMapper.selectEmployeeByIdLike", params);
         for (Employee employee : list) {
             System.out.println(employee);
         }
